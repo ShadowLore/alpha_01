@@ -1,0 +1,146 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--dark);
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+  position: relative;
+  padding: 24px;
+  height:450px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+
+</style>
+
+<section  style="margin-top:5rem" >
+    <div class="container">
+        <div class="row">
+            <div class="title col-12 align-center">
+                <h3 class="mbr-section-subtitle mb-4 mb-md-5 mbr-fonts-style
+                mbr-white mbr-regular upline d-inline-block align-top display-7">Taehyun</h3>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-6 col-xl-4 img-wrap d-inline-block align-top mw-100">
+                <img class="img2 h-auto w-100 align-top mb-4" src="{% static 'images/img_7.png' %}" title="">
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-5 text">
+                <div class="wrapper px-3 px-sm-1 pl-md-0 pl-lg-5 pl-xl-4"><span class="mbr-iconfont mbri-rocket text-icon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    <h3 class="mbr-section-title align-right mbr-white mb-5 pt-4
+                    mbr-fonts-style mbr-regular display-6" style="font-size:30px;">
+                    Stage Name: Taehyun (태현)<br>
+                    Birth Name: Kang Tae Hyun (강태현)<br>
+                    English Name: Terry Kang<br>
+                    Position: –<br>
+                    Birthday: February 5th, 2002<br>
+                    Zodiac Sign: Aquarius<br>
+                    Chinese Zodiac: Snake<br>
+                    Height: 177 cm (5’10”)<br>
+                    Weight: 57 kg (125 lbs)<br>
+                    Blood Type: A<br>
+                    MBTI Type: ESTP<br>
+                    Representative Emoticon:🐿️<br>
+                    Nationality: Korean
+                    </h3>
+                </div>
+            </div>
+             <div class="mbr-section-btn"><a class="mbr-section-subtitle mbr-white mbr-light
+                mbr-fonts-style awesome display-4" style="text-decoration:none; color:#778899">Taehyun Facts:</a></div>
+                <p style="margin-top:3rem">
+                – Taehyun is from Gangnam-gu, Seoul, South Korea.<br>
+                – Taehyun was the 4th member to be revealed on January 17th, 2019.<br>
+                – His representative animal is a caique parrot. (Questioning Film)<br>
+                – His representative flower is a Daffodil. (Questioning Film) <br>
+                – At the end of his Questioning Film, the morse code translates to “Clue”.<br>
+                – His fandom name is “Solomon”.<br>
+                – Family: Dad, mom, older sister (4 years older).<br>
+                – Hobbies: Swimming and football. (Debut showcase) <br>
+                – He is a student at Hanlim Arts School.<br>
+                – Taehyun likes sweet things including Caramel Frappuccino. (Community Site)<br>
+                – Taehyun is someone who focuses on the present more than worrying about the future. (Community Site) <br>
+                – He doesn’t like mint chocolate chip ice cream. (Fanmeeting 030619) <br>
+                – He is left-handed.<br>
+                – Taehyun sleeps with his eyes open and they don’t close all the way. (vLive) <br>
+                – He is mature and passionate. (Debut showcase)<br>
+                – Taehyun used to do educational videos teaching kids how to speak English when he was a little kid.<br>
+                – He has a sister who also speaks English.<br>
+                – He likes photography.<br>
+                – According to Korean netizens, he was in one or more local advertisements.<br>
+                – Yeonjun says Taehyun is in charge of passion and fashion in the group. (TALK X TODAY Ep.1)
+                </p>
+        </div>
+    </div>
+</section>
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/033-zNoi_TuYBdI.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/035-UB78UjdlksU.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/037-i7nW3PvH_2E.jpg' %}" >
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

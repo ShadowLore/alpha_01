@@ -1,0 +1,143 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--dark);
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+  position: relative;
+  padding: 24px;
+  height:450px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+
+</style>
+
+<section style="margin-top:5rem">
+    <div class="container">
+        <div class="row">
+            <div class="title col-12 align-center">
+                <h3 class="mbr-section-subtitle mb-4 mb-md-5 mbr-fonts-style
+                mbr-white mbr-regular upline d-inline-block align-top display-7">Soobin</h3>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-6 col-xl-4 img-wrap d-inline-block align-top mw-100">
+                <img class="img2 h-auto w-100 align-top mb-4" src="{% static 'images/img_1.png' %}" title="">
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-5 text">
+                <div class="wrapper px-3 px-sm-1 pl-md-0 pl-lg-5 pl-xl-4"><span
+                        class="mbr-iconfont mbri-rocket text-icon"
+                        style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    <h3 class="mbr-section-title align-right mbr-white mb-5 pt-4
+                    mbr-fonts-style mbr-regular display-6" style="font-size:30px;">
+                        Stage Name: Soobin (수빈)<br>
+                        Birth Name: Choi Soo Bin (최수빈)<br>
+                        English Name: Steve Choi<br>
+                        Position: Leader<br>
+                        Birthday: December 5th, 2000<br>
+                        Zodiac Sign: Sagittarius<br>
+                        Chinese Zodiac: Dragon<br>
+                        Height: 185 cm (6’1″)<br>
+                        Weight: 67 kg (147 lbs)<br>
+                        Blood Type: A<br>
+                        MBTI Type: ISFP-A<br>
+                        Representative Emoticon: 🐰<br>
+                        Nationality: Korean<br>
+                    </h3>
+                </div>
+            </div>
+            <div class="mbr-section-btn"><a class="mbr-section-subtitle mbr-white mbr-light
+                mbr-fonts-style awesome display-4" style="text-decoration:none; color:#778899">Soobin Facts:</a></div>
+            <p style="margin-top:3rem">
+                – Soobin is from Sangnok-gu, Ansan, Gyeonggi-do, South Korea.<br>
+                – Soobin was the 2nd member to be revealed on January 13th, 2019.<br>
+                – His representative animal is a Praying Mantis. (Questioning Flim)<br>
+                – His representative flower is an Anemone. (Questioning Flower)<br>
+                – At the end of his Questioning Film, the morse code translates to “Tomorrow”.<br>
+                – His fandom name is “Soobrangdan” or “Soobders”.<br>
+                – Family: Dad, mom, an older brother (6 years older), and an older sister (10 years older).<br>
+                – Hobbies: Reading and listening to music.<br>
+                – Soobin has dimples.<br>
+                – Soobin’s nicknames from Kmedia are: ‘Shy Flower Boy/Flower Boy’, ‘Pure and Clear visual’,
+                ‘Flower-Shaped Sunshine’, ‘Flower Prince’.<br>
+                – Soobin can endure anything but dieting, he loves bread. (Community Site)<br>
+                – Soobin isn’t a picky eater, but he can’t take spicy food well. (Community Site)<br>
+                – Recently, his favorite food is tteokbokki. (“To Do” Ep. 61)<br>
+                – He loves ice cream and bingsu.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<div class="wrap">
+    <div class="box">
+        <div class="box-top">
+            <img class="box-image" src="{% static 'images/txt/003-jVHXe344w6c.jpg' %}">
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-top">
+            <img class="box-image" src="{% static 'images/txt/005_w6fGDFSfjs.jpg' %}">
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-top">
+            <img class="box-image" src="{% static 'images/img_1.png' %}">
+        </div>
+    </div>
+</div>
+{% endblock %}

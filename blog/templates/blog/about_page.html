@@ -1,0 +1,124 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<style>
+figure {
+    width:15rem;
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+figure > * {
+  grid-area: 1/1;
+  transition: .4s;
+}
+figure figcaption {
+  display: grid;
+  align-items: end;
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #0000;
+  padding: .75rem;
+  background: var(--c,#0009);
+  clip-path: inset(0 var(--_i,100%) 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0),
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+}
+figure:hover figcaption{
+  --_i: 0%;
+}
+figure:hover img {
+  transform: scale(1.2);
+}
+@supports not (-webkit-mask-clip: text) {
+  figure figcaption {
+   -webkit-mask: none;
+   color: #fff;
+  }
+}
+}
+body{
+      box-sizing: border-box;
+}
+</style>
+
+
+<section  class="header1 " style="margin-top:5rem">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7">
+                <div class="right-side">
+                    <h5 class="mbr-section-title mbr-fonts-style display-1">
+                        <strong>We are <br> Tomorrow x Together</strong>
+                    </h5>
+                    <p class="mbr-text mbr-fonts-style display-1" style="font-size:30px; margin-top:2rem">
+                        TOMORROW X TOGETHER, read as ‘tomorrow by together’, is a bright and youthful boyband aiming to
+                        become the next global breakthrough artist.
+                        The band is composed of five members, SOOBIN, YEONJUN, BEOMGYU, TAEHYUN, HUENINGKAI,
+                        where each member is different from one another, shining in their own way to create synergy.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <img src="{% static 'images/img_3.png' %}" alt="txt"  style=" box-shadow: 40px -42px 0px  rgba(255,255,255, 1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div style="margin-top:8rem;margin-bottom:10rem">
+<div class="col-12 col-md-12 d-flex justify-content-center" >
+       <h3>Members</h3>
+</div>
+
+<div class="d-flex justify-content-around flex-wrap" style="margin-top:4rem;" >
+
+    <a href="{% url 'blog:soobin' %}" style="text-decoration:none">
+        <figure>
+            <img src="{% static 'images/soobin.png' %}" alt="Mountains">
+            <figcaption>Soobin</figcaption>
+        </figure>
+   </a>
+
+    <a href="{% url 'blog:yeongjun' %}" style="text-decoration:none">
+    <figure>
+        <img src="{% static 'images/yeongjun_2.png' %}" alt="Mountains" >
+        <figcaption>Yeongjun</figcaption>
+    </figure>
+    </a>
+
+    <a href="{% url 'blog:taehyun' %}" style="text-decoration:none">
+    <figure >
+        <img src="{% static 'images/taehyun_2.png' %}" alt="Mountains" >
+        <figcaption>Taehyun</figcaption>
+    </figure>
+    </a>
+
+    <a href="{% url 'blog:beomgyu' %}" style="text-decoration:none">
+    <figure >
+        <img src="{% static 'images/beomgyu.png' %}" alt="Mountains" >
+        <figcaption>Beomgyu</figcaption>
+    </figure>
+    </a>
+    <a href="{% url 'blog:huening_kai' %}" style="text-decoration:none">
+    <figure>
+        <img src="{% static 'images/huening_kai.png' %}" alt="Mountains" >
+        <figcaption>Huening Kai</figcaption>
+    </figure>
+    </a>
+
+</div>
+
+ </div>
+{% endblock %}

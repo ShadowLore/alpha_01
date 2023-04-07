@@ -1,0 +1,97 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<!--<article class="media content-section">-->
+<!--    <img class="rounded-circle article-img" src="{{ c.author.profile.image.url }}">-->
+<!--    <div class="media-body">-->
+<!--        <div class="article-metadata">-->
+<!--            <a class="mr-2" href="#">{{ object.author }}</a>-->
+<!--            <small class="text-muted">{{ object.date|date:"F d, Y" }}</small>-->
+<!--            {% if object.author == user %}-->
+<!--            <div>-->
+<!--                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'blog:post-update' object.id %}">Редактировать</a>-->
+<!--                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'blog:post-delete' object.id %}">Удалить</a>-->
+<!--            </div>-->
+<!--            {% endif %}-->
+<!--        </div>-->
+<!--        {% if post.image %}-->
+<!--        <div>-->
+<!--            <img src="{{ object.image.url }}" style="width:100%;" class="card-img-top">-->
+<!--        </div>-->
+<!--        {% endif %}-->
+<!--        <h2 class="article-title">{{ object.title }}</h2>-->
+<!--        <p class="article-content">{{ object.content }}</p>-->
+<!--    </div>-->
+<!--</article>-->
+
+<div style="display:flex; justify-content:space-around;" class="row">
+    {% if object.author == user %}
+    <div>
+        <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" href="{% url 'blog:post-update' object.id %}" >Редактировать</a>
+        <a class="btn btn-outline-danger btn-sm mt-1 mb-1" href="{% url 'blog:post-delete' object.id %}">Удалить</a>
+    </div>
+    {% endif %}
+
+    <div class="col-lg-9  mb-5 mb-sm-2">
+        {% if post.image %}
+        <div class="position-relative image-hover" style="width:25rem;display: block;
+    margin-left: auto;
+    margin-right: auto">
+            <img src="{{ post.image.url }}" class="card-img-top">
+            <small class="text-muted">{{ object.date|date:"F d, Y" }}</small>
+        </div>
+        {% endif %}
+        <div style="padding: 10px;">
+            <img class="rounded-circle article-img" style="width:3rem;" src="{{ object.author.profile.image.url }}">
+            <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">{{ object.author }}</span>
+        </div>
+        <h1 class="font-weight-600 mt-3" >
+            {{ object.title }}
+        </h1>
+        <p class="fs-15 font-weight-normal" style="padding:1rem">
+            {{ object.content|linebreaks }}
+        </p>
+    </div>
+</div>
+
+
+<h2>Комментарии</h2>
+<div id="comments_section">
+
+  {% if user.is_authenticated %}
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      {{ comment_form|crispy }}
+      <button class="btn btn-info" type="submit">Коммент<i class="fas fa-comments"></i></button>
+    </div>
+  </form>
+  {% else %}
+    <a class="btn btn-outline-info" href="{% url 'login' %}">Авторизуйтесь</a><br>
+  {% endif %}
+
+  {% if comments %}
+  <strong class="text-secondary">{{ object.number_of_comments }} Комментариев</strong>
+  <hr>
+  <ul>
+    {% for comment in comments %}
+    <li>
+     <div>
+        <span>
+          <strong class="text-info">{{ comment.author }} </strong>
+          <small class="text-muted">{{ comment.date_posted }}</small>
+        </span>
+        <p>
+          {{ comment.content|safe }}
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <strong class="text-secondary">Еще никто ничего не написал...</strong>
+  {% endif %}
+
+</div>
+{% endblock content %}

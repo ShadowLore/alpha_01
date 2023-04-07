@@ -1,0 +1,147 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--dark);
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+  position: relative;
+  padding: 24px;
+  height:450px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+
+</style>
+
+<section  style="margin-top:5rem" >
+    <div class="container">
+        <div class="row">
+            <div class="title col-12 align-center">
+                <h3 class="mbr-section-subtitle mb-4 mb-md-5 mbr-fonts-style
+                mbr-white mbr-regular upline d-inline-block align-top display-7">Beomgyu</h3>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-6 col-xl-4 img-wrap d-inline-block align-top mw-100">
+                <img class="img2 h-auto w-100 align-top mb-4" src="{% static 'images/img_4.png' %}" title="">
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-5 text">
+                <div class="wrapper px-3 px-sm-1 pl-md-0 pl-lg-5 pl-xl-4"><span class="mbr-iconfont mbri-rocket text-icon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    <h3 class="mbr-section-title align-right mbr-white mb-5 pt-4
+                    mbr-fonts-style mbr-regular display-6" style="font-size:30px;">
+                    Stage Name: Beomgyu (범규)<br>
+                    Birth Name: Choi Beom Gyu (최범규)<br>
+                    English Name: Ben Choi<br>
+                    Position: Visual<br>
+                    Birthday: March 13th, 2001<br>
+                    Zodiac Sign: Pisces<br>
+                    Chinse Zodiac: Snake<br>
+                    Height: 180 cm (5’11”)<br>
+                    Weight: 56 kg (123.5 lbs)<br>
+                    Blood Type: AB<br>
+                    MBTI Type: INFJ<br>
+                    Representative Emoticon: 🐯/🐻<br>
+                    Nationality: Korean<br></h3>
+                </div>
+            </div>
+             <div class="mbr-section-btn"><a class="mbr-section-subtitle mbr-white mbr-light
+                mbr-fonts-style awesome display-4" style="text-decoration:none; color:#778899">Beomgyu Facts:</a></div>
+                <p style="margin-top:3rem">
+                – He was born in Taejeon-dong, Buk-gu, Daegu, South Korea.<br>
+                – Beomgyu was the 5th and last member to be revealed on January 20th, 2019.<br>
+                – His representative animal is a butterfly. (Questioning Film)<br>
+                – His representative flower is Poppy. (Questioning Film) <br>
+                – At the end of his Questioning Film, the morse code translates to “Hope”.<br>
+                – His fandom names are “Bamtori”, “Beombadan” and “Wolftoris”.<br>
+                – Family: Dad, mom, an older brother.<br>
+                – Hobbies: Playing guitar. (Debut showcase) <br>
+                – His nicknames are ‘Bamgyu’ and ‘Cookie’. (Debut showcase) <br>
+                – Beomgyu has the Daegu Satoori accent. (Debut showcase) <br>
+                – He can play the guitar. (Debut showcase) <br>
+                – Kai confirmed that Beomgyu is the center and a visual at a fansign.<br>
+                – Beomgyu calls himself a Tiger because ‘Beom’ means ‘Tiger’.<br>
+                – He is an ARMY (BTS fan).<br>
+                – Beomgyu has dimples.<br>
+                – His favorite season is spring. (Fansign 140319) <br>
+                – He is a student at Hanlim Multi-Arts School.<br>
+                – He has been a trainee for BigHit for 3 years.<br>
+                – His favorite fruit is strawberries.<br>
+                – He is the mood maker of the group.<br>
+                – He is good at English.
+                </p>
+        </div>
+    </div>
+</section>
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/016-gdfgtSq5qRs.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/020-24727p8VUe4.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/021-bs6OTJhLc0g.jpg' %}" >
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

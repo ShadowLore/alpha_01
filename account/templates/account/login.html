@@ -1,0 +1,82 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<style>
+@font-face {
+	font-family: 'FontName';
+	src: url(/fonts/font.ttf);
+}
+.login {
+  font-family: sans-serif
+  width: 500px;
+  padding: 10% 0 0;
+  margin: auto;
+  font-weight: bold;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    border-radius:10px;
+  }
+
+.form input {
+
+    outline: 0;
+    background: hsl(204, 37%, 92%);
+    width: 100%;
+    border: 0;
+    margin: 20px 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius:50px;
+  }
+
+.form button {
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 0;
+    background:  hsl(204, 100%, 52%);;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+
+.form button:hover,.form button:active,.form button:focus {
+    background: hsl(204, 37%, 62%);
+  }
+
+
+.form .registration-form {
+    display: none;
+  }
+
+
+
+</style>
+
+
+<div class="login">
+    <div class="form" >
+        <h1>Авторизация</h1>
+        <hr>
+        <form class="login-form" method="post" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            <hr>
+            <button>Войти</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

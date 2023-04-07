@@ -1,0 +1,147 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--dark);
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+  position: relative;
+  padding: 24px;
+  height:450px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+
+</style>
+
+<section  style="margin-top:5rem" >
+    <div class="container">
+        <div class="row">
+            <div class="title col-12 align-center">
+                <h3 class="mbr-section-subtitle mb-4 mb-md-5 mbr-fonts-style
+                mbr-white mbr-regular upline d-inline-block align-top display-7">Yeonjun</h3>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-6 col-xl-4 img-wrap d-inline-block align-top mw-100">
+                <img class="img2 h-auto w-100 align-top mb-4" src="{% static 'images/img_5.png' %}" title="">
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-5 text">
+                <div class="wrapper px-3 px-sm-1 pl-md-0 pl-lg-5 pl-xl-4"><span class="mbr-iconfont mbri-rocket text-icon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    <h3 class="mbr-section-title align-right mbr-white mb-5 pt-4
+                    mbr-fonts-style mbr-regular display-6" style="font-size:30px;">
+                    Stage Name: Yeonjun (연준)<br>
+                    Birth Name: Choi Yeon Jun (최연준)<br>
+                    English Name: Daniel Choi<br>
+                    Position: –<br>
+                    Birthday: September 13th, 1999<br>
+                    Zodiac Sign: Virgo<br>
+                    Chinese Zodiac: Hare/Rabbit<br>
+                    Height: 181.5 cm (5’11”)<br>
+                    Weight: 62 kg (136 lbs)<br>
+                    Blood Type: A<br>
+                    MBTI Type: ENFP<br>
+                    Representative Emoticon: 🦊<br>
+                    Nationality: Korean<br>
+                    Instagram: yawnzzn
+                    </h3>
+                </div>
+            </div>
+             <div class="mbr-section-btn"><a class="mbr-section-subtitle mbr-white mbr-light
+                mbr-fonts-style awesome display-4" style="text-decoration:none; color:#778899">Yeonjun Facts:</a></div>
+                <p style="margin-top:3rem">
+                – He was born in Seoul, but spent his middle and high school days in Seongnam, South Korea.<br>
+                – Yeonjun was the 1st member to be revealed on January 10th, 2019.<br>
+                – His representative animal is a pupae. (Questioning Film) <br>
+                – His representative flower is a Tulip. (Questioning Film)<br>
+                – At the end of his Question Fim, the morse code translates to “Promise”.<br>
+                – His fandom name is “Moawajjunie”.<br>
+                – Family: Dad, mom.<br>
+                – His uniqueness is his monolids. (Debut showcase) <br>
+                – Hobbies: Dancing, skating, eating. (Debut showcase) <br>
+                – His introduction video surpassed 1 million views within the first 24 hours.<br>
+                – He did a commercial for a ramen brand.<br>
+                – Yeojun ranked 1st on dance, rap and vocals when he was a trainee.<br>
+                – Yeonjun speaks English.<br>
+                – His favorite fruits are apples and bananas.<br>
+                – Yeonjun is the fake maknae.
+                </p>
+        </div>
+    </div>
+</section>
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/010-XvdvjHMGU4E.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/043-aPBFItnOyss.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/013-O8SjLDrdBaM.jpg' %}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/014-gzu6A-JdWdQ.jpg' %}">
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

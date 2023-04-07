@@ -1,0 +1,135 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--dark);
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+  position: relative;
+  padding: 24px;
+  height:450px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+
+</style>
+
+<section  style="margin-top:5rem" >
+    <div class="container">
+        <div class="row">
+            <div class="title col-12 align-center">
+                <h3 class="mbr-section-subtitle mb-4 mb-md-5 mbr-fonts-style
+                mbr-white mbr-regular upline d-inline-block align-top display-7"> Huening Kai</h3>
+            </div>
+
+            <div class="col-12 col-md-9 col-lg-6 col-xl-4 img-wrap d-inline-block align-top mw-100">
+                <img class="img2 h-auto w-100 align-top mb-4" src="{% static 'images/img_6.png' %}" title="">
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-5 text">
+                <div class="wrapper px-3 px-sm-1 pl-md-0 pl-lg-5 pl-xl-4"><span class="mbr-iconfont mbri-rocket text-icon" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
+                    <h3 class="mbr-section-title align-right mbr-white mb-5 pt-4
+                    mbr-fonts-style mbr-regular display-6" style="font-size:30px;">
+                    Stage Name: Huening Kai (휴닝카이)<br>
+                    Birth Name: Kai Kamal Huening<br>
+                    Korean Name: Jung Kai (정카이)<br>
+                    Chinese Name: Xiuning Kai (休宁凯)<br>
+                    Position: Maknae<br>
+                    Birthday: August 14th, 2002<br>
+                    Zodiac Sign: Leo<br>
+                    Chinese Zodiac: Horse<br>
+                    Height: 183 cm (6’0″)<br>
+                    Weight: 67 kg (148 lbs)<br>
+                    Blood Type: A<br>
+                    MBTI Type: ISTP (Updated by Huening Kai on 210612 Fansign)<br>
+                    Representative Emoticon: 🐧<br>
+                    Nationality: Korean-American</h3>
+                </div>
+            </div>
+             <div class="mbr-section-btn"><a class="mbr-section-subtitle mbr-white mbr-light
+                mbr-fonts-style awesome display-4" style="text-decoration:none; color:#778899">Huening Kai Facts:</a></div>
+                <p style="margin-top:3rem">
+                – He was born and lived in Hawaii, USA for a month, stopped by S. Korea to meet his family,
+                    <br>then moved to China and lived there for around 7 years. He moved to S. Korea in winter when he was 8. (Weverse Q&A)<br>
+                – His mother is Korean and his father, Nabil David Huening is German.<br>
+                – He also has Polish and Scottish roots kmspico from his father’s side.<br>
+                – Kai was the 3rd member to be revealed on January 15th, 2019.<br>
+                – His representative animal is a leopard gecko. (Questioning Film)<br>
+                – His representative flower is an Icelandic Poppy. (Questioning Film)<br>
+                – At the end of his Questioning Film, the morse code translates to “Secret”.<br>
+                – His fandom name is “Ningdungie”.<br>
+                – Family: Dad, mom, older sister (Lea), younger sister (Bahiyyih).<br>
+                – His nicknames are ‘Hyuka’ and ‘NingNing’.<br>
+                – Kai is nicknamed the ‘diamond maknae’.<br>
+                – Hobbies: Playing instruments<br>
+                – His favorite fruit is pineapple.
+                </p>
+        </div>
+    </div>
+</section>
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/025-zYhr7XSoHXA.jpg'%}" >
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static 'images/txt/029-PMSo6mp_fT8.jpg' %}">
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
